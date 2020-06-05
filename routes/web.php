@@ -32,6 +32,16 @@ Route::prefix('console')->group(function () {
         Route::livewire('/dashboard', 'console.dashboard.index')
         ->layout('layouts.console')->name('console.dashboard.index');
 
+        //playlists
+        Route::livewire('/playlists', 'console.playlists.index')
+        ->layout('layouts.console')->name('console.playlists.index');
+
+        Route::livewire('/playlists/create', 'console.playlists.create')
+        ->layout('layouts.console')->name('console.playlists.create');
+
+        Route::livewire('/playlists/{id}/edit', 'console.playlists.edit')
+        ->layout('layouts.console')->name('console.playlists.edit');
+
     });
 
 });
