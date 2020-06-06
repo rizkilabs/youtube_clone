@@ -20,8 +20,10 @@
             <div class="col-md-3 mb-4">
                 <div class="card h-100 border-0 rounded shadow-sm">
                     <div class="card-img">
-                        <img src="{{ Storage::url('public/videos/'.$video->image) }}" class="w-100 rounded"
+                        <a href="{{ route('frontend.videos.show', $video->slug) }}">
+                            <img src="{{ Storage::url('public/videos/'.$video->image) }}" class="w-100 rounded"
                             style="border-bottom-left-radius:0px!important;border-bottom-right-radius:0px!important">
+                        </a>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -29,7 +31,7 @@
                                 <img src="{{ asset('images/avatar.png') }}" class="rounded-circle" width="40">
                             </div>
                             <div class="col-12 col-md-10">
-                                <a href="" class="font-weight-bold text-dark text-decoration-none">
+                                <a href="{{ route('frontend.videos.show', $video->slug) }}" class="font-weight-bold text-dark text-decoration-none">
                                     {{ $video->title }}
                                 </a>
                                 <p class="mt-3">
@@ -39,7 +41,7 @@
                         </div>
                     </div>
                     <div class="card-footer" style="background-color: rgb(255, 255, 255);border:none">
-                        {{ $video->views }} views • {{ $video->created_at->diffForHumans() }}
+                        <strong>{{ $video->views }}</strong> views • {{ $video->created_at->diffForHumans() }}
                     </div>
                 </div>
             </div>

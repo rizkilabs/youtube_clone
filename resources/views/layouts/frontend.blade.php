@@ -34,7 +34,7 @@
                 <div class="input-group">
                     <input type="text" wire:model="search" class="form-control border-0 rounded-0 border-right-0" placeholder="Search...">
                     <span class="input-group-append">
-                        <button class="btn text-white shadow border rounded-0 border-left-0" type="button">
+                        <button class="btn text-white shadow border rounded-0 border-left-0" type="button" style="padding-left: 30px;padding-right: 30px;">
                             <i class="fa fa-search"></i>
                         </button>
                     </span>

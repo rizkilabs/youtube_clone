@@ -64,3 +64,6 @@ Route::prefix('console')->group(function () {
     });
 
 });
+
+Route::livewire('/{slug}', 'frontend.videos.show')
+->layout('layouts.frontend')->name('frontend.videos.show');
