@@ -17,7 +17,7 @@ class Index extends Component
 
     protected $updatesQueryString = ['search'];
 
-        /**
+    /**
      * destroy function
      */
     public function destroy($id)

@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="https://raw.githack.com/ttskch/select2-bootstrap4-theme/master/dist/select2-bootstrap4.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <livewire:scripts/>
     <script src="{{ mix('js/app.js') }}"></script>
 </head>
@@ -28,7 +31,7 @@
           <div class="list-group list-group-flush">
             <a href="{{ route('console.dashboard.index') }}" class="list-group-item list-group-item-action {{ setActive('console/dashboard') }}"><i class="fa fa-tachometer-alt" aria-hidden="true"></i> DASHBOARD</a>
             <a href="{{ route('console.playlists.index') }}" class="list-group-item list-group-item-action {{ setActive('console/playlists') }}"><i class="fa fa-list-ul" aria-hidden="true"></i> PLAYLIST</a>
-            <a href="#" class="list-group-item list-group-item-action"><i class="fab fa-youtube" aria-hidden="true"></i> VIDEOS</a>
+            <a href="{{ route('console.videos.index') }}" class="list-group-item list-group-item-action {{ setActive('console/videos') }}"><i class="fab fa-youtube" aria-hidden="true"></i> VIDEOS</a>
             <a href="{{ route('console.users.index') }}" class="list-group-item list-group-item-action {{ setActive('console/users') }}"><i class="fa fa-users" aria-hidden="true"></i> USERS</a>
             <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-cog" aria-hidden="true"></i> SETINGS</a>
           </div>
@@ -57,7 +60,7 @@
             </div>
           </nav>
     
-          <div class="container-fluid">
+          <div class="container-fluid" style="margin-bottom: 50px">
             @yield('content')
           </div>
         </div>

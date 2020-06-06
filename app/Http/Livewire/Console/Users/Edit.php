@@ -55,7 +55,7 @@ class Edit extends Component
                         'email'     => $this->email
                     ]);
         
-                    session()->flash('success', 'Data saved successfully.');
+                    session()->flash('success', 'Data updated successfully.');
                     return redirect()->route('console.users.index');
 
                 } else {
@@ -66,7 +66,7 @@ class Edit extends Component
                         'password'  => bcrypt($this->password)
                     ]);
         
-                    session()->flash('success', 'Data saved successfully.');
+                    session()->flash('success', 'Data updated successfully.');
                     return redirect()->route('console.users.index');
 
                 }

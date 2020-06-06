@@ -42,6 +42,16 @@ Route::prefix('console')->group(function () {
         Route::livewire('/playlists/{id}/edit', 'console.playlists.edit')
         ->layout('layouts.console')->name('console.playlists.edit');
 
+        //videos
+        Route::livewire('/videos', 'console.videos.index')
+        ->layout('layouts.console')->name('console.videos.index');
+
+        Route::livewire('/videos/create', 'console.videos.create')
+        ->layout('layouts.console')->name('console.videos.create');
+
+        Route::livewire('/videos/{id}/edit', 'console.videos.edit')
+        ->layout('layouts.console')->name('console.videos.edit');
+
         //users
         Route::livewire('/users', 'console.users.index')
         ->layout('layouts.console')->name('console.users.index');
