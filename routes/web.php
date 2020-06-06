@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::livewire('/', 'frontend.home.index')
+->layout('layouts.frontend')->name('root');
 
 Route::group(['middleware' => 'guest'], function(){
 

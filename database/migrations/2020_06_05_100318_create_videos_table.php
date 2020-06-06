@@ -22,6 +22,7 @@ class CreateVideosTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('embed_youtube');
             $table->text('content');
+            $table->bigInteger('views')->nullable();
             $table->timestamps();
         });
     }

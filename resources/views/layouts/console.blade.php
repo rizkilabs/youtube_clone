@@ -52,7 +52,7 @@
                     <i class="fa fa-user-circle" aria-hidden="true"></i> {{ Auth::user()->name }}
                   </a>
                   <div class="dropdown-menu border-0 shadow dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#"><i class="fa fa-external-link-alt" aria-hidden="true"></i> View Website</a>
+                    <a class="dropdown-item" href="{{ url('/') }}" target="_blank"><i class="fa fa-external-link-alt" aria-hidden="true"></i> View Website</a>
                     <div class="dropdown-divider"></div>
                     <livewire:auth.logout/>
                   </div>

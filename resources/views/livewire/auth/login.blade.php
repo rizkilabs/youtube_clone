@@ -3,7 +3,9 @@
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="text-center">
+                  <a href="{{ url('/') }}">
                     <img src="{{ asset('images/new-youtube-logo.svg') }}" style="width: 200px">
+                  </a>
                 </div>
                 <div class="card border-0 shadow-sm rounded-lg mt-5">
                     <div class="card-body">

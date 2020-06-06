@@ -98,7 +98,8 @@ class Create extends Component
             'user_id'       => Auth::user()->id,
             'embed_youtube' => $this->embed_youtube,
             'content'       => $this->content,
-            'image'         => $this->storeImage()
+            'image'         => $this->storeImage(),
+            'views'         => 0
         ]);
 
         if($video) {
