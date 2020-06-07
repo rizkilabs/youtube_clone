@@ -1,4 +1,4 @@
-<div>
+<div style="margin-bottom: 50px">
 
     <div class="container-fluid" style="margin-top: 80px">
 
@@ -7,7 +7,7 @@
                 <a href="" class="badge badge-secondary bg-light text-dark shadow-sm mb-2"
                     style="font-size: 18px;border-radius:16px">All Playlist</a>
                 @foreach ($playlists as $playlist)
-                <a href="" class="badge badge-secondary shadow-sm mb-2"
+                <a href="{{ route('frontend.playlists.show', $playlist->slug) }}" class="badge badge-secondary shadow-sm mb-2"
                     style="font-size: 18px;border-radius:16px">{{ $playlist->title }}</a>
                 @endforeach
             </div>
@@ -28,7 +28,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12 col-md-2">
-                                <img src="{{ asset('images/avatar.png') }}" class="rounded-circle" width="40">
+                                <img src="{{ Storage::url('public/avatar/'.$video->user->image) }}" class="rounded-circle" width="40">
                             </div>
                             <div class="col-12 col-md-10">
                                 <a href="{{ route('frontend.videos.show', $video->slug) }}" class="font-weight-bold text-dark text-decoration-none">

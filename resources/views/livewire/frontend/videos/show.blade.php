@@ -14,7 +14,7 @@
                         <hr>
                         <div class="row">
                             <div class="col-2 col-md-1">
-                                <img src="{{ asset('images/avatar.png') }}" class="rounded-circle" width="60">
+                                <img src="{{ Storage::url('public/avatar/'.$user->image) }}" class="rounded-circle" width="60">
                             </div>
                             <div class="col-10 col-md-11">
                                 <p class="mt-3">
@@ -29,6 +29,7 @@
                             </div>
                         </div>
                         <hr>
+                        @include('layouts.comments')
                     </div>
                 </div>
             </div>
@@ -40,7 +41,7 @@
                             <img class="align-self-center mr-2" src="{{ Storage::url('public/videos/'.$video->image) }}" width="200">
                             <div class="media-body">
                                 <h6 class="mt-0 font-weight-bold">{{ $video->title }}</h6>
-                                <p class="mb-0">{{ $user->name }} </p>
+                                <p class="mb-0">{{ $video->user->name }} </p>
                                 <p>
                                    <strong>{{ $video->views }}</strong> views • {{ $video->created_at->diffForHumans() }}
                                 </p>

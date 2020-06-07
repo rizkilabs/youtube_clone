@@ -39,7 +39,7 @@ class Create extends Component
             }else{
                 session()->flash("error_image", "Uploaded file must be an image");
             }
-        } catch (Exception $ex) {
+        } catch (Exception  $ex) {
             
         }
     }

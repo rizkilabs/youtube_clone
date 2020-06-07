@@ -5,6 +5,29 @@
         </div>
         <div class="card-body">
             <form wire:submit.prevent="update">
+                <div class="row">
+                    <div class="col-md-12">
+                        @if($image)
+                        <div class="text-center">
+                            <img src="{{ $image }}" alt="" style="height: 150px;width:150px;object-fit:cover"
+                                class="img-thumbnail">
+                            <p>PREVIEW</p>
+                        </div>
+                        @else
+                        <div class="text-center">
+                            <img src="{{ asset('images/image.png') }}" alt=""
+                                style="height: 150px;width:150px;object-fit:cover" class="img-thumbnail">
+                            <p>PREVIEW</p>
+                        </div>
+                        @endif
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Image</label>
+                    <input type="file" id="image" class="form-control" wire:change="$emit('fileChoosen')">
+                    
+                </div>
                 <input type="hidden" wire:model="userId">
                 <div class="form-group">
                     <label>FULL NAME</label>
@@ -37,3 +60,14 @@
         </div>
     </div>
 </div>
+<script>
+    window.livewire.on('fileChoosen', () => {
+        let inputField = document.getElementById('image')
+        let file = inputField.files[0]
+        let reader = new FileReader();
+        reader.onloadend = () => {
+            window.livewire.emit('fileUpload', reader.result)
+        }
+        reader.readAsDataURL(file);
+    })
+</script>

@@ -35,7 +35,7 @@
                             <td class="text-center">
                                 <iframe width="300" height="150" src="{{ $video->embed_youtube }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </td>
-                            <td class="text-center">
+                            <td class="text-center" style="width:20%">
                                 <a href="{{ route('console.videos.edit', $video->id) }}" class="btn btn-primary btn-sm shadow">EDIT</a>
                                 <button wire:click="destroy({{ $video->id }})" class="btn btn-danger btn-sm shadow">DELETE</button>
                             </td>

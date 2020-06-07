@@ -65,5 +65,8 @@ Route::prefix('console')->group(function () {
 
 });
 
+Route::livewire('/playlist/{slug}', 'frontend.playlists.show')
+->layout('layouts.frontend')->name('frontend.playlists.show');
+
 Route::livewire('/{slug}', 'frontend.videos.show')
 ->layout('layouts.frontend')->name('frontend.videos.show');
