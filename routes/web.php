@@ -23,3 +23,13 @@ Route::group(['middleware' => 'guest'], function(){
     ->layout('layouts.auth')->name('auth.login');
 
 });
+
+Route::prefix('console')->group(function () {
+
+    Route::group(['middleware' => 'auth'], function(){
+
+        Route::livewire('/dashboard', 'console.dashboard.index')
+        ->layout('layouts.console')->name('console.dashboard.index');
+
+    });
+});
