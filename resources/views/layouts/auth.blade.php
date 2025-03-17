@@ -16,8 +16,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <livewire:scripts/>
     <script src="{{ mix('js/app.js') }}"></script>
-    <livewire:styles/>
-    <livewire:scripts/>
 </head>
 <body>
 
