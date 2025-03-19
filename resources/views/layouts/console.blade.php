@@ -31,7 +31,7 @@
           <div class="list-group list-group-flush">
             <a href="{{ route('console.dashboard.index') }}" class="list-group-item list-group-item-action {{ setActive('console/dashboard') }}"><i class="fa fa-tachometer-alt" aria-hidden="true"></i> DASHBOARD</a>
             <a href="{{ route('console.playlists.index') }}" class="list-group-item list-group-item-action {{ setActive('console/playlists') }}"><i class="fa fa-list-ul" aria-hidden="true"></i> PLAYLIST</a>
-            <a href="#" class="list-group-item list-group-item-action"><i class="fab fa-youtube" aria-hidden="true"></i> VIDEOS</a>
+            <a href="{{ route('console.videos.index') }}" class="list-group-item list-group-item-action {{ setActive('console/videos') }}"><i class="fab fa-youtube" aria-hidden="true"></i> VIDEOS</a>
             <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-users" aria-hidden="true"></i> USERS</a>
           </div>
         </div>
