@@ -31,14 +31,16 @@
         <div class="navbar-collapse collapse" id="navbar-sk">
             
             <div class="mx-2 my-auto d-inline" style="width: 60%">
-                <div class="input-group">
-                    <input type="text" wire:model="search" class="form-control border-0 rounded-0 border-right-0" placeholder="Search...">
-                    <span class="input-group-append">
-                        <button class="btn text-white shadow border rounded-0 border-left-0" type="button" style="padding-left: 30px;padding-right: 30px;">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                </div>
+                <form action="{{ route('frontend.search.index') }}">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control border-0 rounded-0 border-right-0" placeholder="Search...">
+                        <span class="input-group-append">
+                            <button class="btn text-white shadow border rounded-0 border-left-0" type="submit" style="padding-left: 30px;padding-right: 30px;">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
             </div>
 
             <ul class="nav navbar-nav navbar-right ml-auto">

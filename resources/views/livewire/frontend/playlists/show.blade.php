@@ -14,7 +14,7 @@
                         <hr>
                         <div class="row">
                             <div class="col-2 col-md-1">
-                                <img src="{{ asset('images/avatar.png') }}" class="rounded-circle" width="60">
+                                <img src="{{ Storage::url('public/avatar/'.$video_play->user->image) }}" class="rounded-circle" width="60">
                             </div>
                             <div class="col-10 col-md-11">
                                 <p class="mt-3">
@@ -36,7 +36,9 @@
             <div class="col-md-4">
                 <div class="card border-0 rounded shadow-sm mb-3">
                     <div class="card-header">
-                        <i class="fa fa-list-ul" aria-hidden="true"></i> {{ $playlist->title }}
+                        <h5>
+                            <i class="fa fa-list-ul" aria-hidden="true"></i> {{ $playlist->title }}
+                        </h5> 
                     </div>
                     <div class="card-body" style="overflow: hidden; height: 380px;overflow-y: scroll;padding-bottom:10px">
 

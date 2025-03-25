@@ -22,7 +22,7 @@
                     <div class="card-img">
                         <a href="{{ route('frontend.videos.show', $video->slug) }}">
                             <img src="{{ Storage::url('public/videos/'.$video->image) }}" class="w-100 rounded"
-                            style="border-bottom-left-radius:0px!important;border-bottom-right-radius:0px!important">
+                            style="border-bottom-left-radius:0px!important;border-bottom-right-radius:0px!important;height:150px;object-fit:cover">
                         </a>
                     </div>
                     <div class="card-body">

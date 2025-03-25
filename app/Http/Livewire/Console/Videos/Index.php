@@ -30,12 +30,12 @@ class Index extends Component
             Storage::disk('public')->delete('videos/'.$video->image);
             $video->delete();
             session()->flash('success', 'Data deleted successfully.');
-            return redirect()->route('console.playlists.index');
+            return redirect()->route('console.videos.index');
 
         } else {
 
             session()->flash('error', 'Data failed to delete.');
-            return redirect()->route('console.playlists.index');
+            return redirect()->route('console.videos.index');
 
         }
 
